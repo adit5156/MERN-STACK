@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Questions and Solutions</title>
+</head>
+<body>
+    <!-- Question 1 -->
+    <!-- Solution 1 -->
+
+    <table border="2">
+        <caption>Student Information</caption>
+        <tbody>
+            <tr>
+                <th rowspan="6">Info</th>
+                <th rowspan="2">Name</th>
+                <th colspan="2">Address</th>
+            </tr>
+
+            <tr>
+                <th>City</th>
+                <th>House</th>
+            </tr>
+        
+            <tr>
+                <td>A</td>
+                <td>Delhi</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>Mumbai</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>Kolkata</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>Pune</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- Question 2 -->
+    <!-- Solution 2 -->
+
+    <form action="/server">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="username">
+        </div>
+
+        <div>
+            <label for="gender">Sex: </label>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Female</label>
+        </div>
+
+        <div>
+            <label for="country">Country: </label>
+            <select name="country" id="country">
+                <option>Select an option</option>
+                <option value="India">India</option>
+                <option value="Nepal">Nepal</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="msg">Message: </label> <br>
+            <textarea name="message" id="msg" cols="40" rows="5"></textarea>
+        </div>
+
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <label for="subscribe">Subscribe?</label>
+        </div>
+
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- Question 3 -->
+    <!-- Solution 3 -->
+
+    <h2>Feedback Form</h3>
+    <form action="/contact">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="username" placeholder="Write your name">
+        </div>
+
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="Write your email">
+        </div>
+
+        <div>
+            <label for="message">Message: </label> 
+            <br>
+            <textarea name="message" id="message" rows="5" cols="40"></textarea>
+        </div>
+
+        <div>
+            <label for="rating">Rate us out of 5: </label>
+            <div>
+                <input type="radio" name="rating" id="radio1" value="1">
+                <label for="radio1">1</label>
+            </div>
+            <div>
+            <input type="radio" name="rating" id="radio2" value="2">
+            <label for="radio2">2</label>
+            </div>
+            <div>
+            <input type="radio" name="rating" id="radio3" value="3">
+            <label for="radio3">3</label>
+            </div>
+            <div>
+            <input type="radio" name="rating" id="radio4" value="4">
+            <label for="radio4">4</label>
+            </div>
+            <div>
+            <input type="radio" name="rating" id="radio5" value="5">
+            <label for="radio5">5</label>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div>
+            <Button>Send your message!</Button>
+        </div>
+    </form>
+
+</body>
+</html>

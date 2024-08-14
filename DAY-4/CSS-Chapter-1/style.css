@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    /* color: magenta; */
+    color: #fff;
+    /* background-color: rgb(120, 0, 120); */
+    /* background-color: #000000; */
+    /* background-color: #ffff00; */
+    /* background-color: #ff00ff; */
+    background-color: #000;
+
+}
+
+p {
+    color: blueviolet;
+    background-color: cornsilk;
+}
+
+button {
+    color: white;
+    background-color: gold;
+    cursor: pointer;
+}

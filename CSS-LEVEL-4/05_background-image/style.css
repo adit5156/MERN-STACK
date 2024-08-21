@@ -1,0 +1,13 @@
+div {
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #7aa874;
+    margin: 10px auto;
+
+    background-image: url('https://t3.ftcdn.net/jpg/05/69/30/42/360_F_569304262_RGVohUth9wyR5Msa3CoR4XFvMYE8VG1k.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.card {
+    width: 300px;
+    box-shadow: 0 0 4px rgb(141, 138, 138);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 500ms ease 0s;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+}
+
+.desc {
+    padding: 20px;
+}
+
+.desc p {
+    margin-top: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 0 4px rgb(58, 58, 58);
+    transform: scale(1.01);
+}

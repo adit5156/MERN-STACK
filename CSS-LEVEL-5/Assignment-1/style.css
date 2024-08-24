@@ -1,0 +1,18 @@
+.container {
+    height: 400px;
+    width: 400px;
+    border: 3px solid aquamarine;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.alphabets {
+    margin: 15px;
+    font-size: 50px;
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 10px;
+}

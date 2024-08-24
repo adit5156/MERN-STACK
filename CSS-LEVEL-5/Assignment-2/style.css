@@ -1,0 +1,16 @@
+.container {
+    height: 50px;
+    width: 900px;
+    background-color: pink;
+    border: 2px solid aquamarine;
+    border-radius: 8px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.options {
+    max-height: 50px;
+    width: 80px;
+}

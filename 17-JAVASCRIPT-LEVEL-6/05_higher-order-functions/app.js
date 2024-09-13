@@ -9,6 +9,6 @@ let greet = function() {
 }
 
 multipleGreetings(greet, 10);
-multipleGreetings(function() {
+multipleGreetings(function () {
   console.log("Namaste Bharat");
 }, 10);

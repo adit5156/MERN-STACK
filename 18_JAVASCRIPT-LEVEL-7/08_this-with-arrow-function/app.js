@@ -1,5 +1,5 @@
 const student = {
-    name: "Aman",
+    name: "Aditya",
     marks: 95,
     prop: this,
 
@@ -22,6 +22,6 @@ const student = {
     getInfo2: function() {
         setTimeout(function() {
             console.log(this);
-        }, 2000)
-    }
-}
+        }, 2000);
+    },
+};

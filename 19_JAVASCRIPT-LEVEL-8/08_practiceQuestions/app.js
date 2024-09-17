@@ -1,26 +1,13 @@
+// Q1. Multiple of 10
+
 let arr1 = [10, 20, 30, 40, 50];
 
-let isMultipleOf10 = arr1.every((element) => {
+let multipleOf10 = arr1.every((element) => {
     return (element % 10 == 0);
 });
-console.log(isMultipleOf10);
+console.log(multipleOf10);
 
-function getMin(arr) {
-    let min = arr.reduce((acc, element) => {
-        if(acc < element) {
-            return acc;
-        }
-        else {
-            return element;
-        }
-    });
-
-    console.log("Minimum value of the array = ", min);
-}
-
-let arr2 = [2, 4, 6, 8, 10, 12, 3];
-getMin(arr2);
-
+// Q2. Maximum in Array 
 
 function getMax(arr) {
     let max = arr.reduce((acc, element) => {
@@ -31,9 +18,26 @@ function getMax(arr) {
             return acc;
         }
     });
-
-    console.log("Maximum value of the array = " , max);
+    console.log("The maximum value in the array = ", max);
 }
 
-let arr3 = [2, 4, 6, 8, 10, 200, 190, 290];
-getMax(arr3);
+let arr2 = [2, 10, 14, 3, 1, 7, 6, 31, 17];
+getMax(arr2);
+
+
+// Q3. Minimum in Array
+
+function getMin(arr) {
+    let min = arr.reduce((acc, element) => {
+        if(acc < element) {
+            return acc;
+        }
+        else {
+            return element;
+        }
+    });
+    console.log("The minimum value of the array = ", min);
+}
+
+let arr3 = [6, 9, 14, 3, 19, 24, 54];
+getMin(arr3);

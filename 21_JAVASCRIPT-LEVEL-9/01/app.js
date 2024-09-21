@@ -23,3 +23,10 @@ console.log(queryAll);
 
 queryAll = document.querySelectorAll('.box a');
 console.log(queryAll);
+
+
+let heading = document.querySelector('h1');
+heading.innerHTML = `<u>${heading.innerText}</u>`;
+
+let boldFirstLink = document.querySelector('.box a');
+boldFirstLink.innerHTML = `<strong>${boldFirstLink.innerText}</strong>`;

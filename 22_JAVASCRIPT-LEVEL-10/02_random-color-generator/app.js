@@ -5,10 +5,10 @@ let h1 = document.querySelector("h1");
 
 btn.addEventListener("click", () => {
     let randomColor = getRandomColor();
-
+    h1.innerText = randomColor;
     colorDiv.style.backgroundColor = randomColor;
-    h1.innerText = `${randomColor}`;
 });
+
 
 function getRandomColor() {
     let red = Math.round(Math.random() * 255);

@@ -53,4 +53,28 @@ function btnPress() {
     let userColor = btn.getAttribute("id");
     userSeq.push(userColor);
     console.log(userSeq);
+
+    checkAns();
+}
+
+function checkAns() {
+    console.log(`Current Level: ${level}`);
+
+    let idx = level - 1;
+
+    if(userSeq[idx] === gameSeq[idx]) {
+        console.log("Same Value");
+        levelUp();
+    }
+    else {
+        h2.innerText = "Game Over! Press any key to start.";
+        bgFlashRed();
+    }
+}
+
+function bgFlashRed() {
+    document.body.classList.add("bgFlashRed");
+    setTimeout(function() {
+        document.body.classList.remove("bgFlashRed");
+    }, 200);
 }

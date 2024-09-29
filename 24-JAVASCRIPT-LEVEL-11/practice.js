@@ -122,37 +122,37 @@
 
 
 
-function saveToDb(data) {
-    return new Promise((resolve, reject) => {
-        let internetSpeed = Math.floor(Math.random() * 10) + 1;
-        if(internetSpeed > 4) {
-            resolve(data);
-        }
-        else {
-            reject(data);
-        }
-    });
-}
+// function saveToDb(data) {
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if(internetSpeed > 4) {
+//             resolve(data);
+//         }
+//         else {
+//             reject(data);
+//         }
+//     });
+// }
 
-saveToDb("Apple India")
-.then((result) => {
-    console.log("Success1: Data is saved i.e.", result);
-    return saveToDb("HP India");
-})
-.then((result) => {
-    console.log("Success2: Data is saved i.e.", result);
-    return saveToDb("Lenovo India");
-})
-.then((result) => {
-    console.log("Success3: Data is saved i.e.", result);
-    return saveToDb("Dell India");
-})
-.then((result) => {
-    console.log("Success4: Data is saved i.e.", result);
-})
-.catch((error) => {
-    console.log("Failure: Weak Connection i.e.", error);
-});
+// saveToDb("Apple India")
+// .then((result) => {
+//     console.log("Success1: Data is saved i.e.", result);
+//     return saveToDb("HP India");
+// })
+// .then((result) => {
+//     console.log("Success2: Data is saved i.e.", result);
+//     return saveToDb("Lenovo India");
+// })
+// .then((result) => {
+//     console.log("Success3: Data is saved i.e.", result);
+//     return saveToDb("Dell India");
+// })
+// .then((result) => {
+//     console.log("Success4: Data is saved i.e.", result);
+// })
+// .catch((error) => {
+//     console.log("Failure: Weak Connection i.e.", error);
+// });
 
 
 

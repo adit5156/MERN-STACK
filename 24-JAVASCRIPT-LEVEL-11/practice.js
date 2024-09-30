@@ -157,41 +157,41 @@
 
 
 
-let h1 = document.querySelector("h1");
+// let h1 = document.querySelector("h1");
 
-function colorChange(color, delay) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            h1.style.color = color;
-            resolve(color);
-        }, delay);
-    });
-}
+// function colorChange(color, delay) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             h1.style.color = color;
+//             resolve(color);
+//         }, delay);
+//     });
+// }
 
-colorChange("red", 1000)
-.then((result) => {
-    console.log(`Color has been changed to ${result}`);
-    return colorChange("green", 1000);
-})
-.then((result) => {
-    console.log(`Color has been changed to ${result}`);
-    return colorChange("blue", 1000);
-})
-.then((result) => {
-    console.log(`Color has been changed to ${result}`);
-    return colorChange("yellow", 1000);
-})
-.then((result) => {
-    console.log(`Color has been changed to ${result}`);
-    return colorChange("hotpink", 1000);
-})
-.then((result) => {
-    console.log(`Color has been changed to ${result}`);
-    return colorChange("orange", 1000);
-})
-.then((result) => {
-    console.log(`Color has been changed to ${result}`);
-})
-.catch((error) => {
-    console.log("Promise is rejected", error);
-});
+// colorChange("red", 1000)
+// .then((result) => {
+//     console.log(`Color has been changed to ${result}`);
+//     return colorChange("green", 1000);
+// })
+// .then((result) => {
+//     console.log(`Color has been changed to ${result}`);
+//     return colorChange("blue", 1000);
+// })
+// .then((result) => {
+//     console.log(`Color has been changed to ${result}`);
+//     return colorChange("yellow", 1000);
+// })
+// .then((result) => {
+//     console.log(`Color has been changed to ${result}`);
+//     return colorChange("hotpink", 1000);
+// })
+// .then((result) => {
+//     console.log(`Color has been changed to ${result}`);
+//     return colorChange("orange", 1000);
+// })
+// .then((result) => {
+//     console.log(`Color has been changed to ${result}`);
+// })
+// .catch((error) => {
+//     console.log("Promise is rejected", error);
+// });

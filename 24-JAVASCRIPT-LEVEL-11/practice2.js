@@ -127,38 +127,104 @@
 
 
 
+// function saveToDb(data) {
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if(internetSpeed > 4) {
+//             resolve(data);
+//         }
+//         else {
+//             reject(data);
+//         }
+//     });
+// }
+
+// saveToDb("Apple India")
+// .then((result) => {
+//     console.log(`Success1: Data is saved i.e.`, result);
+//     return saveToDb("HP India");
+// })
+// .then((result) => {
+//     console.log(`Success2: Data is saved i.e.`, result);
+//     return saveToDb("Lenovo India");
+// })
+// .then((result) => {
+//     console.log(`Success3: Data is saved i.e.`, result);
+//     return saveToDb("Dell India");
+// })
+// .then((result) => {
+//     console.log(`Success4: Data is saved i.e.`, result);
+//     return saveToDb("Asus India");
+// })
+// .then((result) => {
+//     console.log(`Success5: Data is saved i.e.`, result);
+// })
+// .catch((error) => {
+//     console.log("Failure: Weak connection. Data not saved i.e.", error);
+// });
+
+// let h1 = document.querySelector("h1");
+
+// function colorChange(color, delay) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//             if(internetSpeed > 3) {
+//                 reject("Weak connection");
+//             }
+//             h1.style.color = color;
+//             console.log(`Color has been changed to ${color}`);
+//             resolve(color);
+//         }, delay);
+//     });
+// }
+
+// async function demo() {
+//     try{
+//         await colorChange("red",1000);
+//         await colorChange("green", 1000);
+//         await colorChange("blue", 1000);
+//         await colorChange("orange", 1000);
+//         await colorChange("hotpink", 1000);
+//         await colorChange("yellow", 1000);
+//     }
+//     catch(error) {
+//         console.log("Error 404", error);
+//     }
+
+//     let a = 5;
+//     console.log(a);
+//     console.log("New num =", a+3);
+// }
+
+// demo();
+
+
 function saveToDb(data) {
     return new Promise((resolve, reject) => {
         let internetSpeed = Math.floor(Math.random() * 10) + 1;
         if(internetSpeed > 4) {
+            console.log(`Success: Data is saved i.e. ${data}`);
             resolve(data);
         }
         else {
+            console.log(`Failure: Weak connection. Data not saved i.e. ${data}`);
             reject(data);
         }
     });
 }
 
-saveToDb("Apple India")
-.then((result) => {
-    console.log(`Success1: Data is saved i.e.`, result);
-    return saveToDb("HP India");
-})
-.then((result) => {
-    console.log(`Success2: Data is saved i.e.`, result);
-    return saveToDb("Lenovo India");
-})
-.then((result) => {
-    console.log(`Success3: Data is saved i.e.`, result);
-    return saveToDb("Dell India");
-})
-.then((result) => {
-    console.log(`Success4: Data is saved i.e.`, result);
-    return saveToDb("Asus India");
-})
-.then((result) => {
-    console.log(`Success5: Data is saved i.e.`, result);
-})
-.catch((error) => {
-    console.log("Failure: Weak connection. Data not saved i.e.", error);
-});
+async function demo() {
+    try {
+        await saveToDb("Apple India");
+        await saveToDb("HP India");
+        await saveToDb("Lenovo India");
+        await saveToDb("Dell India");
+        await saveToDb("Asus India");
+    }
+    catch(error) {
+        
+    }
+}
+
+demo();

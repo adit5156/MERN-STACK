@@ -1,0 +1,124 @@
+// let h1 = document.querySelector("h1");
+
+// function changeColor(color, delay, nextColorChange) {
+//     setTimeout(() => {
+//         h1.style.color = color;
+//         if(nextColorChange) {
+//             nextColorChange(color);
+//         }
+//     }, delay)
+// }
+
+// // Callback Hell / Callback Nesting
+// changeColor("red", 1000, (color) => {
+//     console.log(`Color has been changed to ${color}`);
+//         changeColor("green", 1000, (color) => {
+//             console.log(`Color has been changed to ${color}`);
+//                 changeColor("blue", 1000, (color) => {
+//                     console.log(`Color has been changed to ${color}`);
+//                     changeColor("yellow", 1000, (color) => {
+//                         console.log(`Color has been changed to ${color}`);
+//                         changeColor("hotpink", 1000, (color) => {
+//                             console.log(`Color has been changed to ${color}`);
+//                             changeColor("orange", 1000, (color) => {
+//                                 console.log(`Color has been changed to ${color}`);
+//                             });
+//                         });
+//                     });
+//                 });
+//             }
+//         );
+//     }
+// );
+
+
+
+
+// function saveToDb(data, resolve, reject) {
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//     if(internetSpeed > 4) {
+//         resolve(data);
+//     }
+//     else {
+//         reject(data);
+//     }
+// }
+
+// Callback Hell / Callback Nesting
+// saveToDb("Apple India", 
+//     (result) => {
+//         console.log("Success1: Data is saved i.e.", result);
+//         saveToDb("HP India", 
+//             (result) => {
+//                 console.log("Success2: Data is saved i.e.", result);
+//                 saveToDb("Lenovo India",
+//                     (result) => {
+//                         console.log("Success3: Data is saved i.e.", result);
+//                         saveToDb("Dell India",
+//                             (result) => {
+//                                 console.log("Success4: Data is saved i.e.", result);
+//                                 saveToDb("Acer India",
+//                                     (result) => {
+//                                         console.log("Success5: Data is saved i.e.", result);
+//                                     },
+//                                     (error) => {
+//                                         console.log("Failure: Weak Connection i.e.", error);
+//                                     }
+//                                 );
+//                             },
+//                             (error) => {
+//                                 console.log("Failure: Weak Connection i.e.", error);
+//                             }
+//                         );
+//                     },
+//                     (error) => {
+//                         console.log("Failure: Weak Connection i.e.", error);;
+//                     }
+//                 );
+//             },
+//             (error) => {
+//                 console.log("Failure: Weak Connection i.e.", error);
+//             }
+//         );
+//     },
+//     (error) => {
+//         console.log("Failure: Weak Connection i.e.", error);
+//     }
+// );
+
+
+function saveToDb(data) {
+    return new Promise((resolve, reject) => {
+        let internetSpeed = Math.floor(Math.random() * 10) + 1;
+        if(internetSpeed > 4) {
+            resolve(data);
+        }
+        else {
+            reject(data);
+        }
+    });
+}
+
+saveToDb("Apple India")
+.then((result) => {
+    console.log("Success1: Data is saved i.e.", result);
+    return saveToDb("HP India");
+})
+.then((result) => {
+    console.log("Success2: Data is saved i.e.", result);
+    return saveToDb("Lenovo India");
+})
+.then((result) => {
+    console.log("Success3: Data is saved i.e.", result);
+    return saveToDb("Dell India");
+})
+.then((result) => {
+    console.log("Success4: Data is saved i.e.", result);
+    return saveToDb("Acer India");
+})
+.then((result) => {
+    console.log("Success5: Data is saved i.e.", result);
+})
+.catch((error) => {
+    console.log("Failure. Weak Connection i.e.", error);
+});

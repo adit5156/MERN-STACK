@@ -87,38 +87,77 @@
 // );
 
 
-function saveToDb(data) {
+// function saveToDb(data) {
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if(internetSpeed > 4) {
+//             resolve(data);
+//         }
+//         else {
+//             reject(data);
+//         }
+//     });
+// }
+
+// saveToDb("Apple India")
+// .then((result) => {
+//     console.log("Success1: Data is saved i.e.", result);
+//     return saveToDb("HP India");
+// })
+// .then((result) => {
+//     console.log("Success2: Data is saved i.e.", result);
+//     return saveToDb("Lenovo India");
+// })
+// .then((result) => {
+//     console.log("Success3: Data is saved i.e.", result);
+//     return saveToDb("Dell India");
+// })
+// .then((result) => {
+//     console.log("Success4: Data is saved i.e.", result);
+//     return saveToDb("Acer India");
+// })
+// .then((result) => {
+//     console.log("Success5: Data is saved i.e.", result);
+// })
+// .catch((error) => {
+//     console.log("Failure. Weak Connection i.e.", error);
+// });
+
+let h1 = document.querySelector("h1");
+
+function colorChange(color, delay) {
     return new Promise((resolve, reject) => {
-        let internetSpeed = Math.floor(Math.random() * 10) + 1;
-        if(internetSpeed > 4) {
-            resolve(data);
-        }
-        else {
-            reject(data);
-        }
+        setTimeout(() => {
+            h1.style.color = color;
+            resolve(color);
+        }, delay);
     });
 }
 
-saveToDb("Apple India")
+colorChange("red", 1000)
 .then((result) => {
-    console.log("Success1: Data is saved i.e.", result);
-    return saveToDb("HP India");
+    console.log(`Color has been changed to ${result}`);
+    return colorChange("green", 1000);
 })
 .then((result) => {
-    console.log("Success2: Data is saved i.e.", result);
-    return saveToDb("Lenovo India");
+    console.log(`Color has been changed to ${result}`);
+    return colorChange("blue", 1000);
 })
 .then((result) => {
-    console.log("Success3: Data is saved i.e.", result);
-    return saveToDb("Dell India");
+    console.log(`Color has been changed to ${result}`);
+    return colorChange("yellow", 1000);
 })
 .then((result) => {
-    console.log("Success4: Data is saved i.e.", result);
-    return saveToDb("Acer India");
+    console.log(`Color has been changed to ${result}`);
+    return colorChange("hotpink", 1000);
 })
 .then((result) => {
-    console.log("Success5: Data is saved i.e.", result);
+    console.log(`Color has been changed to ${result}`);
+    return colorChange("orange", 1000);
+})
+.then((result) => {
+    console.log(`Color has been changed to ${result}`);
 })
 .catch((error) => {
-    console.log("Failure. Weak Connection i.e.", error);
+    console.log(`Promise is rejected. Color not changed to ${error}`);
 });

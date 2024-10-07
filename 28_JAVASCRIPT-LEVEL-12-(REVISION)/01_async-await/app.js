@@ -1,6 +1,6 @@
 // async function greet() {
-//     // return "Hello World";
-//     throw "Weak Connection";
+//     return "Hello World";
+//     // throw "Weak Connection";
 // }
 
 // greet()
@@ -34,7 +34,6 @@
 // demo();
 
 
-
 // let h1 = document.querySelector("h1");
 
 // function colorChange(color, delay) {
@@ -42,8 +41,8 @@
 //         setTimeout(() => {
 //             h1.style.color = color;
 //             console.log(`Color has been changed to ${color}`);
-//             resolve(color);
-//         }, delay)
+//             resolve();
+//         }, delay);
 //     });
 // }
 
@@ -53,16 +52,17 @@
 //         await colorChange("green", 1000);
 //         await colorChange("blue", 1000);
 //         await colorChange("orange", 1000);
-//         await colorChange("yellow", 1000);
 //         await colorChange("hotpink", 1000);
+//         await colorChange("yellow", 1000);
 //         await colorChange("aqua", 1000);
 //     }
 //     catch(error) {
-//         console.log("Error Found:", error);
+//         console.log(`Color cannnot be changed to ${error}`);
 //     }
 // }
 
 // testColorChange();
+
 
 
 function saveToDb(data) {
@@ -73,7 +73,7 @@ function saveToDb(data) {
             resolve();
         }
         else {
-            reject();
+            reject(data);
         }
     });
 }
@@ -87,7 +87,7 @@ async function testSaveToDb() {
         await saveToDb("Acer India");
     }
     catch(error) {
-        console.log(`Failure: Weak connection. Data not saved i.e. ${error}`);
+        console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
     }
 }
 

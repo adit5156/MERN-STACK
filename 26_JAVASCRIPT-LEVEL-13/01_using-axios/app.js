@@ -4,20 +4,18 @@ let p = document.querySelector("#result");
 let btn = document.querySelector("button");
 
 btn.addEventListener("click", async () => {
-    let fact = await getFacts();
+    let fact = await getFact();
+    // console.log(fact);
     p.innerText = fact;
-})
+});
 
-async function getFacts() {
+
+async function getFact() {
     try {
         let request = await axios.get(url);
-        console.log(request);
-        console.log(request.data);
-        console.log(request.data.fact);
-        return (request.data.fact);
+        return request.data.fact;
     }
     catch(error) {
-        console.log("Error Occured:", error);
-        return "No Fact Found";
-    }   
+        return `No Fact Found`;
+    }
 }

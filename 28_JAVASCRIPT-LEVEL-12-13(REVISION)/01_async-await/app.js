@@ -57,7 +57,7 @@
 //         await colorChange("aqua", 1000);
 //     }
 //     catch(error) {
-//         console.log(`Color cannnot be changed to ${error}`);
+//         console.log(`Color has not been changed to ${error}`);
 //     }
 // }
 
@@ -65,30 +65,30 @@
 
 
 
-function saveToDb(data) {
-    return new Promise((resolve, reject) => {
-        let internetSpeed = Math.floor(Math.random() * 10) + 1;
-        if(internetSpeed > 4) {
-            console.log(`Success: Data is saved i.e. ${data}`);
-            resolve();
-        }
-        else {
-            reject(data);
-        }
-    });
-}
+// function saveToDb(data) {
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if(internetSpeed > 4) {
+//             console.log(`Success: Data is saved i.e. ${data}`);
+//             resolve();
+//         }
+//         else {
+//             reject(data);
+//         }
+//     });
+// }
 
-async function testSaveToDb() {
-    try {
-        await saveToDb("Apple India");
-        await saveToDb("HP India");
-        await saveToDb("Lenovo India");
-        await saveToDb("Dell India");
-        await saveToDb("Acer India");
-    }
-    catch(error) {
-        console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
-    }
-}
+// async function testSaveToDb() {
+//     try {
+//         await saveToDb("Apple India");
+//         await saveToDb("HP India");
+//         await saveToDb("Lenovo India");
+//         await saveToDb("Dell India");
+//         await saveToDb("Acer India");
+//     }
+//     catch(error) {
+//         console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
+//     }
+// }
 
-testSaveToDb();
+// testSaveToDb();

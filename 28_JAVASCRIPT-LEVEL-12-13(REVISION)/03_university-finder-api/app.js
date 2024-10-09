@@ -10,14 +10,14 @@ btn.addEventListener("click", async () => {
     for(let response of responses) {
         let uniName = response.name;
         let uniCountry = response.country;
-        createElement(uniName, uniCountry);
+        createLi(uniName, uniCountry);
     }
 });
 
-function createElement(uniName, uniCountry) {
-    let listItem = document.createElement("li");
-    listItem.innerText = `${uniName}, ${uniCountry}`;
-    ol.appendChild(listItem);
+function createLi(uniName, uniCountry) {
+    let li = document.createElement("li");
+    li.innerText = `${uniName}, ${uniCountry}`;
+    ol.appendChild(li);
 }
 
 async function getUni(url) {

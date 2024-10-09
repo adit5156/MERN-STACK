@@ -27,15 +27,23 @@ let url = "https://catfact.ninja/fact";
 // .then((data2) => {
 //     console.log(data2);
 //     console.log(data2.fact);
+//     return fetch(url);
+// })
+// .then((request3) => {
+//     return request3.json();
+// })
+// .then((data3) => {
+//     console.log(data3);
+//     console.log(data3.fact);
 // })
 // .catch((error) => {
-//     console.log("Error Found:", error);
+//     console.log(`No Facts Found ${error}`);
 // });
 
 
 // Using Async Await
 
-// async function getData(url) {
+// async function getData1() {
 //     try {
 //         let request = await fetch(url);
 //         let data = await request.json();
@@ -43,47 +51,41 @@ let url = "https://catfact.ninja/fact";
 //         console.log(data.fact);
 //     }
 //     catch(error) {
-//         console.log("Error Found", error);
+//         console.log(`No Fact Found ${error}`);
 //     }
 // }
 
-// getData(url);
-// getData(url);
-// getData(url);
+// getData1();
+// getData1();
+// getData1();
 
 
 
 // Using Async Await with Axios
 
-// async function getData2(url) {
-//     try {
-//         let request = await axios.get(url);
-//         console.log(request);
-//         console.log(request.data);
-//         console.log(request.data.fact);
-//     }
-//     catch(error) {
-//         console.log("Error Found", error);
-//     }
+// async function getData2() {
+//     let request = await axios.get(url);
+//     console.log(request);
+//     console.log(request.data);
+//     console.log(request.data.fact);
 // }
 
-// getData2(url);
+// getData2();
+// getData2();
+// getData2();
 
 
 
-// Using Async Await with Axios & Sending Request Headers with API Request
+// Using Async Await with Axios and Sending Request Headers with API Request
 
 async function getData3(url) {
-    try {
-        const config = { headers: {Accept: "application/json"}};
-        let request = await axios.get(url, config);
-        console.log(request);
-        console.log(request.data);
-        console.log(request.data.joke);
-    }
-    catch(error) {
-        console.log("Error Found:", error);
-    }
+    const config = { headers: {Accept: "application/json"}};
+    let request = await axios.get(url, config);
+    console.log(request);
+    console.log(request.data);
+    console.log(request.data.joke);
 }
 
+getData3("https://icanhazdadjoke.com/");
+getData3("https://icanhazdadjoke.com/");
 getData3("https://icanhazdadjoke.com/");

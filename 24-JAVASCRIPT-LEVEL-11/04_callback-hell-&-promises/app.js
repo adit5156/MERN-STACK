@@ -118,6 +118,7 @@
 
 let h1 = document.querySelector("h1");
 
+// Promise Creation Part
 function colorChange(color, delay) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -127,6 +128,7 @@ function colorChange(color, delay) {
     });
 }
 
+// Promise Consumption Part
 colorChange("red", 1000)
 .then((result) => {
     console.log(`Color has been changed to ${result}`);

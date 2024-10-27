@@ -2,14 +2,13 @@
 
 // function colorChange(color, delay, nextColorChange) {
 //     setTimeout(() => {
-//             h1.style.color = color;
-//             console.log(`Color has been changed to ${color}`);
-//             if(nextColorChange) {
+//         h1.style.color = color;
+//         console.log(`Color has been changed to ${color}`);
+//         if(nextColorChange) {
 //             nextColorChange();
-//             }
-//     }, delay)
+//         }
+//     }, delay);
 // }
-
 
 // Callback Hell / Callback Nesting
 // colorChange("red", 1000, () => {
@@ -26,7 +25,7 @@
 
 
 // function saveToDb(data, resolve, reject) {
-//     let internetSpeed = Math.floor(Math.random() * 10) +1;
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
 //     if(internetSpeed > 4) {
 //         resolve(data);
 //     }
@@ -36,44 +35,44 @@
 // }
 
 // Callback Hell / Callback Nesting
-// saveToDb("Apple India", 
+// saveToDb("Apple India",
 //     (result) => {
-//         console.log("Success: Data is saved i.e.", result);
+//         console.log(`Success: Data is saved i.e. ${result}`);
 //         saveToDb("HP India",
 //             (result) => {
-//                 console.log("Success: Data is saved i.e.", result);
-//                 saveToDb("Lenovo India",
+//                 console.log(`Success: Data is saved i.e. ${result}`);
+//                 saveToDb("Lenovo India", 
 //                     (result) => {
-//                         console.log("Success: Data is saved i.e.", result);
+//                         console.log(`Success: Data is saved i.e. ${result}`);
 //                         saveToDb("Dell India",
 //                             (result) => {
-//                                 console.log("Success: Data is saved i.e.", result);
-//                                 saveToDb("Acer India", 
+//                                 console.log(`Success: Data is saved i.e. ${result}`);
+//                                 saveToDb("Acer India",
 //                                     (result) => {
-//                                         console.log("Success: Data is saved i.e.", result);
+//                                         console.log(`Success: Data is saved i.e. ${result}`);
 //                                     },
 //                                     (error) => {
-//                                         console.log("Failure: Weak Connection. Data not saved i.e.", error);
+//                                         console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
 //                                     }
 //                                 )
 //                             },
 //                             (error) => {
-//                                 console.log("Failure: Weak Connection. Data not saved i.e.", error);
+//                                 console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
 //                             }
 //                         )
 //                     },
 //                     (error) => {
-//                         console.log("Failure: Weak Connection. Data not saved i.e.", error);
+//                         console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
 //                     }
 //                 )
 //             },
 //             (error) => {
-//                 console.log("Failure: Weak Connection. Data not saved i.e.", error);
+//                 console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
 //             }
 //         )
 //     },
 //     (error) => {
-//         console.log("Failure: Weak Connection. Data not saved i.e.", error);
+//         console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
 //     }
 // )
 
@@ -85,39 +84,39 @@
 //         if(internetSpeed > 4) {
 //             resolve(data);
 //         }
-//         else{
+//         else {
 //             reject(data);
 //         }
 //     });
 // }
 
-// Promise Consumption Part
+// Promise Consumption part
 // saveToDb("Apple India")
 // .then((result) => {
-//     console.log("Success: Data is saved i.e.", result);
-//     return saveToDb("HP India")
+//     console.log(`Success: Data is saved i.e. ${result}`);
+//     return saveToDb("HP India");
 // })
 // .then((result) => {
-//     console.log("Success: Data is saved i.e.", result);
-//     return saveToDb("Lenovo India")
+//     console.log(`Success: Data is saved i.e. ${result}`);
+//     return saveToDb("Lenovo India");
 // })
 // .then((result) => {
-//     console.log("Success: Data is saved i.e.", result);
+//     console.log(`Success: Data is saved i.e. ${result}`);
 //     return saveToDb("Dell India")
 // })
 // .then((result) => {
-//     console.log("Success: Data is saved i.e.", result);
-//     return saveToDb("Acer India")
+//     console.log(`Success: Data is saved i.e. ${result}`);
+//     return saveToDb("Acer India");
 // })
 // .then((result) => {
-//     console.log("Success: Data is saved i.e.", result);
+//     console.log(`Success: Data is saved i.e. ${result}`);
 // })
 // .catch((error) => {
-//     console.log("Failure: Weak Connection. Data not saved i.e.", error);
+//     console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
 // });
 
-let h1 = document.querySelector("h1");
 
+let h1 = document.querySelector("h1");
 // Promise Creation Part
 function colorChange(color, delay) {
     return new Promise((resolve, reject) => {
@@ -128,7 +127,6 @@ function colorChange(color, delay) {
     });
 }
 
-// Promise Consumption Part
 colorChange("red", 1000)
 .then((result) => {
     console.log(`Color has been changed to ${result}`);
@@ -154,5 +152,5 @@ colorChange("red", 1000)
     console.log(`Color has been changed to ${result}`);
 })
 .catch((error) => {
-    console.log(`Failure: No color found ${error}`);
+    console.log(`No Color Found: ${error}`);
 });

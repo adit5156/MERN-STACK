@@ -4,12 +4,12 @@ let ol = document.querySelector("ol");
 
 btn.addEventListener("click", async () => {
     let url = `http://universities.hipolabs.com/search?name=${inp.value}`;
-    let responses = await getUni(url);
+    let universities = await getUni(url);
     inp.value = "";
-    ol.innerText = "";
-    for(let response of responses) {
-        let uniName = response.name;
-        let uniCountry = response.country;
+    ol.innerHTML = "";
+    for(let university of universities) {
+        let uniName = university.name;
+        let uniCountry = university.country;
         await createElement(uniName, uniCountry);
     }
 });
@@ -26,6 +26,6 @@ async function getUni(url) {
         return request.data;
     }
     catch(error) {
-        console.log("No Uni Found", error);
+        console.log("No Universities Found", error);
     }
 }

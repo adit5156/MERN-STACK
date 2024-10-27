@@ -16,6 +16,6 @@ setTimeout(() => {
 
 setTimeout(() => {
     console.log("Hello, Apna College");
-}, 3000);
+}, 4000);
 
 console.log("Hello...");

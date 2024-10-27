@@ -127,6 +127,7 @@ function colorChange(color, delay) {
     });
 }
 
+// Promise Consumption Part
 colorChange("red", 1000)
 .then((result) => {
     console.log(`Color has been changed to ${result}`);

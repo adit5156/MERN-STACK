@@ -34,57 +34,60 @@
 // demo();
 
 
-let h1 = document.querySelector("h1");
-
-function colorChange(color,delay) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            h1.style.color = color;
-            resolve(console.log(`Color has been changed to ${color}`));
-        }, delay);
-    });
-}
-
-async function testColorChange() {
-    try {
-        await colorChange("red", 1000);
-        await colorChange("green", 1000);
-        await colorChange("blue", 1000);
-        await colorChange("orange", 1000);
-        await colorChange("hotpink", 1000);
-        await colorChange("aqua", 1000);
-    }
-    catch(error) {
-        console.log(`No Color Found ${error}`);
-    }
-}
-
-testColorChange();
 
 
-// function saveToDb(data) {
+// let h1 = document.querySelector("h1");
+// function colorChange(color, delay) {
 //     return new Promise((resolve, reject) => {
-//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
-//         if(internetSpeed > 4) {
-//             resolve(console.log(`Success: Data is saved i.e. ${data}`));
-//         }
-//         else {
-//             reject(data);
-//         }
+//         setTimeout(() => {
+//             h1.style.color = color;
+//             resolve(console.log(`Color has been changed to ${color}`));
+//         }, delay);
 //     });
 // }
 
-// async function testSaveToDb() {
+// async function testColorChange() {
 //     try {
-//         await saveToDb("Apple India");
-//         await saveToDb("HP India");
-//         await saveToDb("Lenovo India");
-//         await saveToDb("Dell India");
-//         await saveToDb("Acer India");
+//         await colorChange("red", 1000);
+//         await colorChange("green", 1000);
+//         await colorChange("blue", 1000);
+//         await colorChange("orange", 1000);
+//         await colorChange("hotpink", 1000);
+//         await colorChange("aqua", 1000);
 //     }
 //     catch(error) {
-//         console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
+//         console.log(`No Color Found: ${error}`);
 //     }
 // }
 
-// testSaveToDb();
+// testColorChange();
+
+
+
+
+function saveToDb(data) {
+    return new Promise((resolve, reject) => {
+        let internetSpeed = Math.floor(Math.random() * 10) + 1;
+        if(internetSpeed > 4) {
+            resolve(console.log(`Success: Data is saved i.e. ${data}`));
+        }
+        else {
+            reject(data);
+        }
+    });
+}
+
+async function testSaveToDb() {
+    try {
+        await saveToDb("Apple India");
+        await saveToDb("HP India");
+        await saveToDb("Lenovo India");
+        await saveToDb("Dell India");
+        await saveToDb("Acer India");
+    }
+    catch(error) {
+        console.log(`Failure: Weak Connection. Data not saved i.e. ${error}`);
+    }
+}
+
+testSaveToDb();
